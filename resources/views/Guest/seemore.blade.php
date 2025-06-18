@@ -41,7 +41,7 @@
             <br>
             <div class="row">
 
-                <div class="col-4"><a href="{{route('Student.apply', ['vacancy_id' => $vacancy->id])}}"><button class="applybtn">Apply</button></a></div>
+                <div class="col-4"><a href="{{route('Student.apply.perform', $vacancy->id)}}"><button class="applybtn">Apply</button></a></div>
 
                 <div class="col-4"><a href="{{route('Student.addfavorite', ['vacancy_id' => $vacancy->id])}}"><button class="favoritebtn">Add to favorite</button></a></div>
 

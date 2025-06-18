@@ -38,7 +38,7 @@
                       <br><br>
         
                       <label for="location" class="addpostlabel">Location:</label><br>
-                      <input type="text" id="location" name="location" class="details" placeholder="Eg: Colombo, Sri Lanka">
+                      <input type="text" id="location" name="location" class="details" placeholder="Eg: North West, South West">
                       @error('location')
                           <div class="input-error">{{ $message }}</div>
                       @enderror

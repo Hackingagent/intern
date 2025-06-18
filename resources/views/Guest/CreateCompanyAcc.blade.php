@@ -86,7 +86,7 @@
             @enderror
             <br><br>
   
-            <label for="username" style="font-size:14px";>Username (for Wokrplace login):</label><br>
+            <label for="username" style="font-size:14px";>Username (for InternHub login):</label><br>
             <input type="text" class="details" name="username">
             <br>
             @error('username')
@@ -94,7 +94,7 @@
             @enderror
             <br>
   
-            <label for="password" style="font-size:14px";>Password (for Workplace login):</label><br>
+            <label for="password" style="font-size:14px";>Password (for InternHub login):</label><br>
             <input type="text" id="password" class="details" name="password">
             <br>
             @error('password')
