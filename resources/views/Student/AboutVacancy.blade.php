@@ -6,7 +6,7 @@
 <hr style="color:#242582; height:3px;">
 
 <div class="row" id="myposts">
-    
+
         <div class="col-lg-1"></div>
         <div class="col-lg-10 feedpostcontent" >
             <div class="heading"><u>Vacancy Details</u></div>
@@ -36,16 +36,16 @@
                     </div><br><br>
                 </div>
                 <br>
-                
+
             </div>
             <br>
             <div class="row">
-                
+
                 {{-- <div class="col-4"><a href="/"> <button class="applybtn">Apply</button></a></div> --}}
                 @if(\App\Models\StudentApply::where('student_id', Auth::guard('student')->user()->id)->where('post_id', $vacancy->id)->exists())
                     <div class="col-4"><button class="favoritebtn-success">Already Applied</button></div>
                 @else
-                    <div class="col-4"><a href="{{route('Student.apply', ['vacancy_id' => $vacancy->id])}}"><button class="applybtn">Apply</button></a></div>
+                    <div class="col-4"><a href="{{route('Student.apply.perform', $vacancy->id)}}"><button class="applybtn">Apply</button></a></div>
                 @endif
 
 
@@ -55,26 +55,26 @@
                     <div class="col-4"><a href="{{route('Student.addfavorite', ['vacancy_id' => $vacancy->id])}}"><button class="favoritebtn">Add to favorite</button></a></div>
                 @endif
 
-                
+
                 <div class="col-4"><a href="{{route('Student.StuFeed')}}"><button class="seemore">Back to Feed</button></a></div>
-            
+
             </div>
-            
+
         </div>
 
         <div class="col-lg-1"></div>
-    
+
 </div>
 
 <br><hr style="color:#242582; height:3px;"><br>
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10 addpost">
-  
+
       <div class="heading"><u>Company Details</u><br><br>
         <img src="{{ asset('storage/'.$company->profilePic) }}" style="width: 40%; height: auto;"  alt="Comapny Avatar" id="CompanyAvatar">
       </div>
-      
+
         <br>
           <strong>Company Name:</strong>
           <p>{{$company->name}}</p>
@@ -103,13 +103,13 @@
           <strong>Company LinkedIn Profile/Website:</strong>
           <p>{{$company->linkedin}}</p>
           <br>
-       
+
           <center>
             <a href="{{route('Student.StuFeed')}}"><button class="seemore">Back to Feed</button></a>
           </center>
-      
-  
-  
+
+
+
     </div>
     <div class="col-lg-1"></div>
   </div>
