@@ -19,6 +19,10 @@ Route::post('/storeComData', [GuestController::class, 'CreateNewCompany']);
 Route::post('/logincheck',[GuestController::class, 'LoginCheck'] );
 Route::get('see-more', [GuestController::class, 'seeMore'])->name('seeMore');
 
+Route::get('/map', function(){
+    return view('Student.map');
+})->name('map');
+
 
 Route::prefix('Company')->name('Company.')->group(function(){
     Route::middleware(['auth:company'])->group(function(){

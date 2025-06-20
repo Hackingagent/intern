@@ -14,7 +14,7 @@
     <div class="heading"><u>Edit Your Details</u><br><br>
       <img src="{{ asset('storage/'.Auth::guard('student')->user()->profilePic) }}" style="width: 40%; height: auto;"  alt="Student Avatar" id="CompanyAvatar">
     </div>
-    
+
     <form action="{{route('Student.editStuData')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="firstname" style="font-size:14px";>First Name:</label><br>
@@ -91,7 +91,7 @@
       <div style="text-align: center">
         <input type="submit" value="Submit" class="subBtn">
       </div>
-         
+
     </form>
     <br><br>
     <div style="text-align: center">
@@ -102,6 +102,6 @@
   </div>
   <div class="col-lg-2"></div>
 </div>
-        
+
 
 @endsection
